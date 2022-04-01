@@ -12,6 +12,8 @@ class WishBoneSlaveSpec extends AnyFlatSpec with ChiselScalatestTester {
   val baseAddr = 0x3000000
   "WishBoneSlave" should "pass" in {
     test(new WishboneSlave(baseAddr)).withAnnotations(Seq(WriteVcdAnnotation)) { dut =>
+      println("DEPRECATED TEST")
+      assert(false==true)
       def step(steps: Int = 1):Unit={
         dut.clock.step(steps)
       }
